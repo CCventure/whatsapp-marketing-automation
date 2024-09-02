@@ -21,7 +21,7 @@ This project automates sending messages via WhatsApp using Python and Selenium. 
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/qiyascc/whatsapp-marketing-automation.git wma
+   git clone https://github.com/ccventure/whatsapp-marketing-automation.git wma
    cd wma
    ```
 
