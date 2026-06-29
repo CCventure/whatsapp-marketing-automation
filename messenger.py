@@ -1,6 +1,7 @@
 import time
 import csv
 import logging
+import urllib.parse
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
@@ -22,12 +23,13 @@ class Messenger:
             self.msg = file.read()
 
     def send_message(self, num):
-        link = f'{config.URL}send?phone={num}&text={self.msg}'
+        text = urllib.parse.quote(self.msg)
+        link = f'{config.URL}send?phone={num}&text={text}'
         try:
             self.driver.get(link)
 
             input_element_select = config.INPUT_ELEMENT
-            time.sleep(10)
+            time.sleep(config.NEW_MSG_TIME)
             input_field = self.driver.find_element(By.XPATH, input_element_select)
 
             input_field.click()
