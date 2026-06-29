@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Local config / secrets
+.env
+
+# OS / editor cruft
+.DS_Store
+.idea/
+.vscode/
